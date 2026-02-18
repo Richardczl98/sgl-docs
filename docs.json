@@ -25,7 +25,13 @@
                 "pages": [
                   "docs/hardware-platforms/ascend-npus/Support Features on Ascend NPU",
                   "docs/hardware-platforms/ascend-npus/Support Models on Ascend NPU",
-                  "docs/hardware-platforms/ascend-npus/DeepSeek examples"
+                  "docs/hardware-platforms/ascend-npus/DeepSeek Examples",
+                  "docs/hardware-platforms/ascend-npus/Qwen3 Examples",
+                  "docs/hardware-platforms/ascend-npus/MindSpore Models",
+                  "docs/hardware-platforms/ascend-npus/Contribution Guide",
+                  "docs/hardware-platforms/ascend-npus/Best Practice on Ascend NPU",
+                  "docs/hardware-platforms/ascend-npus/Qwen3.5",
+                  "docs/hardware-platforms/ascend-npus/GLM-5"
                 ]
               }
             ]
