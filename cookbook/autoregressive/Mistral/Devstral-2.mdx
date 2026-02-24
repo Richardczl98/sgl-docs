@@ -264,33 +264,9 @@ print()
 ```
 
 
-## AMD GPU Support
+## 5.Benchmark
 
-## 1. Model Deployment
-
-This section provides deployment configurations optimized for different hardware platforms and use cases.
-
-
-### 1.1 Basic Usage
-
-For basic API usage and request examples, please refer to:
-
-- [SGLang Basic Usage Guide](https://docs.sglang.ai/basic_usage/send_request.html)
-
-### 1.2 Advanced Usage
-
-
-```shell
-python3 -m sglang.launch_server \
-  --model-path mistralai/Devstral-2-123B-Instruct-2512 \
-  --tp 8 \
-  --trust-remote-code \
-  --port 8888
-```
-
-## 2.Benchmark
-
-### 2.1 Benchmark Commands
+### 5.1 Benchmark Commands
 
 **Scenario 1: Chat (1K/1K) - Most Important**
 
@@ -468,7 +444,7 @@ Max ITL (ms):                            616.73
 
 
 
-#### 2.2 Understanding the Results
+#### 5.2 Understanding the Results
 
 **Key Metrics:**
 
@@ -492,11 +468,11 @@ Max ITL (ms):                            616.73
 - Lower TTFT = more responsive user experience
 - Lower TPOT = faster generation speed
 
-### 2.3 Accuracy Benchmark
+### 5.3 Accuracy Benchmark
 
 Document model accuracy on standard benchmarks:
 
-#### 2.3.1 GSM8K Benchmark
+#### 5.3.1 GSM8K Benchmark
 
 - Benchmark Command
 
