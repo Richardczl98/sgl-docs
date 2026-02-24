@@ -264,7 +264,8 @@
                   "cookbook/autoregressive/GLM/GLM-4.6",
                   "cookbook/autoregressive/GLM/GLM-4.6V",
                   "cookbook/autoregressive/GLM/GLM-4.7",
-                  "cookbook/autoregressive/GLM/GLM-4.7-Flash"
+                  "cookbook/autoregressive/GLM/GLM-4.7-Flash",
+                  "cookbook/autoregressive/GLM/GLM-5"
                 ]
               },
               {
