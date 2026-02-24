@@ -243,7 +243,8 @@
                   "cookbook/autoregressive/DeepSeek/DeepSeek-V3_1",
                   "cookbook/autoregressive/DeepSeek/DeepSeek-V3",
                   "cookbook/autoregressive/DeepSeek/DeepSeek-R1",
-                  "cookbook/autoregressive/DeepSeek/DeepSeek-OCR"
+                  "cookbook/autoregressive/DeepSeek/DeepSeek-OCR",
+                  "cookbook/autoregressive/DeepSeek/DeepSeek-OCR-2"
                 ]
               },
               {
