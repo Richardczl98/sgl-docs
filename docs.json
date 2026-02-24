@@ -311,6 +311,12 @@
                 ]
               },
               {
+                "group": "InclusionAI",
+                "pages": [
+                  "cookbook/autoregressive/InclusionAI/Ling-2.5-1T"
+                ]
+              },
+              {
                 "group": "InternVL",
                 "pages": [
                   "cookbook/autoregressive/InternVL/InternVL3.5"
