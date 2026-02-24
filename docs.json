@@ -259,6 +259,7 @@
                 "group": "GLM",
                 "pages": [
                   "cookbook/autoregressive/GLM/GLM-Glyph",
+                  "cookbook/autoregressive/GLM/GLM-OCR",
                   "cookbook/autoregressive/GLM/GLM-4.5",
                   "cookbook/autoregressive/GLM/GLM-4.5V",
                   "cookbook/autoregressive/GLM/GLM-4.6",
