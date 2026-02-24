@@ -6,7 +6,10 @@ export const DeepSeekR1AdvancedDeployment = () => {
       title: 'Hardware Platform',
       items: [
         { id: 'b200', label: 'B200', default: true },
-        { id: 'h200', label: 'H200', default: false }
+        { id: 'h200', label: 'H200', default: false },
+        { id: 'mi300x', label: 'MI300X', default: false },
+        { id: 'mi325x', label: 'MI325X', default: false },
+        { id: 'mi355x', label: 'MI355X', default: false }
       ]
     },
     quantization: {
@@ -120,6 +123,72 @@ export const DeepSeekR1AdvancedDeployment = () => {
       enableFlashinferAllreduceFusion: true,
       schedulerRecvInterval: 10,
       enableSymmMem: true
+    },
+    'mi300x-fp8-latency': {
+      modelPath: 'deepseek-ai/DeepSeek-R1-0528',
+      tp: 8,
+      dp: 1,
+      cudaGraphMaxBs: 1,
+      maxRunningRequests: 32,
+      memFractionStatic: 0.8,
+      chunkedPrefillSize: 4096,
+      maxPrefillTokens: 8192,
+      schedulerRecvInterval: 20
+    },
+    'mi300x-fp8-throughput': {
+      modelPath: 'deepseek-ai/DeepSeek-R1-0528',
+      tp: 8,
+      dp: 1,
+      cudaGraphMaxBs: 256,
+      maxRunningRequests: 256,
+      memFractionStatic: 0.9,
+      chunkedPrefillSize: 8192,
+      maxPrefillTokens: 16384,
+      schedulerRecvInterval: 10
+    },
+    'mi325x-fp8-latency': {
+      modelPath: 'deepseek-ai/DeepSeek-R1-0528',
+      tp: 8,
+      dp: 1,
+      cudaGraphMaxBs: 1,
+      maxRunningRequests: 32,
+      memFractionStatic: 0.8,
+      chunkedPrefillSize: 4096,
+      maxPrefillTokens: 8192,
+      schedulerRecvInterval: 20
+    },
+    'mi325x-fp8-throughput': {
+      modelPath: 'deepseek-ai/DeepSeek-R1-0528',
+      tp: 8,
+      dp: 1,
+      cudaGraphMaxBs: 256,
+      maxRunningRequests: 256,
+      memFractionStatic: 0.9,
+      chunkedPrefillSize: 8192,
+      maxPrefillTokens: 16384,
+      schedulerRecvInterval: 10
+    },
+    'mi355x-fp8-latency': {
+      modelPath: 'deepseek-ai/DeepSeek-R1-0528',
+      tp: 8,
+      dp: 1,
+      cudaGraphMaxBs: 1,
+      maxRunningRequests: 32,
+      memFractionStatic: 0.8,
+      chunkedPrefillSize: 4096,
+      maxPrefillTokens: 8192,
+      schedulerRecvInterval: 20
+    },
+    'mi355x-fp8-throughput': {
+      modelPath: 'deepseek-ai/DeepSeek-R1-0528',
+      tp: 8,
+      dp: 1,
+      cudaGraphMaxBs: 256,
+      maxRunningRequests: 256,
+      memFractionStatic: 0.9,
+      chunkedPrefillSize: 8192,
+      maxPrefillTokens: 16384,
+      schedulerRecvInterval: 10
     }
   };
 
@@ -157,7 +226,8 @@ export const DeepSeekR1AdvancedDeployment = () => {
 
   // Check if option should be disabled
   const isOptionDisabled = (optionName, itemId) => {
-    if (optionName === 'quantization' && itemId === 'fp4' && values.hardware === 'h200') {
+    if (optionName === 'quantization' && itemId === 'fp4' &&
+        (values.hardware === 'h200' || values.hardware === 'mi300x' || values.hardware === 'mi325x' || values.hardware === 'mi355x')) {
       return true;
     }
     return false;
@@ -165,8 +235,9 @@ export const DeepSeekR1AdvancedDeployment = () => {
 
   // Get disabled reason
   const getDisabledReason = (optionName, itemId) => {
-    if (optionName === 'quantization' && itemId === 'fp4' && values.hardware === 'h200') {
-      return 'FP4 not supported on H200';
+    if (optionName === 'quantization' && itemId === 'fp4' &&
+        (values.hardware === 'h200' || values.hardware === 'mi300x' || values.hardware === 'mi325x' || values.hardware === 'mi355x')) {
+      return 'FP4 not supported on H200, MI300X, MI325X, MI355X';
     }
     return '';
   };

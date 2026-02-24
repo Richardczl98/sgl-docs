@@ -8,7 +8,9 @@ export const DeepSeekR1BasicDeployment = () => {
         { id: 'h100', label: 'H100', default: false },
         { id: 'h200', label: 'H200', default: false },
         { id: 'b200', label: 'B200', default: true },
-        { id: 'mi300x', label: 'MI300X', default: false }
+        { id: 'mi300x', label: 'MI300X', default: false },
+        { id: 'mi325x', label: 'MI325X', default: false },
+        { id: 'mi355x', label: 'MI355X', default: false }
       ]
     },
     quantization: {
@@ -102,8 +104,8 @@ export const DeepSeekR1BasicDeployment = () => {
     const strategyArray = Array.isArray(strategy) ? strategy : [];
 
     // Validation checks
-    if ((hardware === 'h100' || hardware === 'mi300x') && quantization === 'fp4') {
-      return '# Error: H100 and MI300X only supports FP8 quantization\n# Please select FP8 quantization or use B200 hardware';
+    if ((hardware === 'h100' || hardware === 'mi300x' || hardware === 'mi325x' || hardware === 'mi355x') && quantization === 'fp4') {
+      return '# Error: H100, MI300X, MI325X and MI355X only support FP8 quantization\n# Please select FP8 quantization or use B200 hardware';
     }
 
     // Model path based on quantization
