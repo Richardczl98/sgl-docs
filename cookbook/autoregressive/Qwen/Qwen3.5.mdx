@@ -2,6 +2,8 @@
 title: Qwen3.5
 ---
 
+import { Qwen35Deployment } from '/src/snippets/autoregressive/qwen35-deployment.jsx'
+
 ## 1. Model Introduction
 
 [Qwen3.5-397B-A17B](https://huggingface.co/Qwen/Qwen3.5-397B-A17B) is the latest flagship model in the Qwen series developed by Alibaba, representing a significant leap forward with unified vision-language foundation, efficient hybrid architecture, and scalable reinforcement learning.
@@ -45,7 +47,7 @@ This section provides deployment configurations optimized for different hardware
 
 **Interactive Command Generator**: Use the configuration selector below to automatically generate the appropriate deployment command for your hardware platform and capabilities.
 
-> Note: The interactive config generator component is not available in this build.
+<Qwen35Deployment />
 
 ### 3.2 Configuration Tips
 
