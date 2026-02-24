@@ -231,7 +231,7 @@
                   "cookbook/autoregressive/Qwen/Qwen3",
                   "cookbook/autoregressive/Qwen/Qwen3-Next",
                   "cookbook/autoregressive/Qwen/Qwen3-VL",
-                  "cookbook/autoregressive/Qwen/Qwen3-Coder-480B-A35B",
+                  "cookbook/autoregressive/Qwen/Qwen3-Coder",
                   "cookbook/autoregressive/Qwen/Qwen2.5-VL"
                 ]
               },
