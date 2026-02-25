@@ -2,6 +2,11 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
   "name": "SGLang Documentation",
+  "seo": {
+    "metatags": {
+      "google-site-verification": "bX3ofyYQhraIpAYf4DpyZQXZO_G4xLR_RqeBAKnJA7g"
+    }
+  },
   "redirects": [
     {
       "source": "/docs/supported-models/diffusion-language-models",
