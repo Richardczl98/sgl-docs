@@ -9,7 +9,7 @@ The SGLang Diffusion HTTP server implements an OpenAI-compatible API for image a
 ## Prerequisites
 
 - Python 3.11+ if you plan to use the OpenAI Python SDK.
-- A running SGLang Diffusion server (see the [CLI reference](/docs/sglang-diffusion/api/cli) for launch instructions).
+- A running SGLang Diffusion server (see the [CLI reference](./cli) for launch instructions).
 
 ## Start the server
 
@@ -27,8 +27,8 @@ SERVER_ARGS=(
 sglang serve "${SERVER_ARGS[@]}"
 ```
 
-- `--model-path` — path to the model or HuggingFace model ID
-- `--port` — HTTP port to listen on (default: `30000`)
+- `--model-path` -- path to the model or HuggingFace model ID
+- `--port` -- HTTP port to listen on (default: `30000`)
 
 ### Get model information
 
@@ -400,7 +400,7 @@ Control output quality and compression for both image and video generation throu
 | Parameter | Type | Description |
 |:--|:--|:--|
 | `output-quality` | string | Preset quality level. Default: `"default"` |
-| `output-compression` | integer | Direct compression level override (0–100). When provided, takes precedence over `output-quality` |
+| `output-compression` | integer | Direct compression level override (0â€“100). When provided, takes precedence over `output-quality` |
 
 **Quality presets:**
 
